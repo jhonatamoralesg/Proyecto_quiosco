@@ -4,15 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="./js/index.js"></script>
-    <script src="./js/bicicleta.js"></script>
+    <link rel="stylesheet" href="style2.css">
 
+    <link rel="stylesheet" href="cart.css">
+    <script src="./js/productos.js"></script>
+    
+    <script src="./js/cart.js"></script>
 </head>
 <body>
     <header>
   <nav>
-    <a href="./index.html"><img src="./img/logo.png" alt="Logo"></a>
+    <a href="./index.html"><img src="./img/logo_julio.png" id="logo" alt="Logo"></a>
     <div>
 <a href="">MTB</a>
 <a href="">Ruta</a>
@@ -20,10 +22,24 @@
     </div>
   </nav>
     </header>
-    <main></main>
+    <main>
+
+      <section id="productos-container">     </section>
+      <section id="totales">
+   <p>Total de unidades  <span class="bold-text" id="unidades">0</span></p>
+   <p>Total de precio: S/.  <span class="bold-text" id="precio">0</span></p>
+   <button disabled>Registrar Venta</button>
+   <button disabled>Reiniciar Carrito</button>
+
+  </section>
+
+    </main>
     <footer>
      <p>Desarrollado por Jhonatan Morales Galvez</p>
       <p>Querés ver como lo hice ?  <a href=""  target="_blank">Entra Aquí</a></p>
     </footer>
+
+  
+    <script src="./js/cartService.js"></script>
 </body>
 </html>

@@ -1,0 +1,103 @@
+/* Contenedor de productos */
+#productos-container {
+    width: 700px; /* Ajusta este ancho según tu necesidad */
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Tarjetas de productos */
+.tarjeta-producto {
+    display: flex;
+    gap: 20px;
+    align-items: center; /* Centra verticalmente los elementos */
+    justify-content: space-between; /* Asegura que los elementos se distribuyan correctamente */
+    padding: 10px 0;
+    border-bottom: 1px solid #eee; /* Para separar visualmente los productos */
+}
+
+.tarjeta-producto img {
+    height: 110px;
+    aspect-ratio: 1.5;
+}
+
+/* Estilo del nombre del producto */
+.tarjeta-producto h2 {
+    width: 130px;
+    margin: 0;
+    flex-shrink: 0; /* Evita que el título se reduzca demasiado */
+}
+
+/* Contenedor de precios y botones */
+.tarjeta-producto .precio-cantidad {
+    display: flex;
+    align-items: center;
+    gap: 20px; /* Espacio entre el precio y los botones */
+}
+
+/* Para el texto del precio */
+.tarjeta-producto p {
+    font-weight: bold;
+    margin-right: 20px;
+}
+
+/* Contenedor para los botones de cantidad y el campo */
+.tarjeta-producto .cantidad-control {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Espacio entre los botones y el campo de cantidad */
+}
+
+.tarjeta-producto button {
+    width: 30px;
+    height: 30px;
+    font-size: 16px;
+    border: none;
+    background-color: #ee6130;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.2s ease;
+}
+button {
+
+    width: 120px;
+    font-size: 18px; /* Tamaño de fuente de un h2 */
+    font-weight: bold; 
+    background-color: #f0f0f0; /* Color de fondo del botón */
+    color: #333;
+    line-height: 1.2; /* Altura de línea */
+    font-family: 'Arial', sans-serif; /* Fuente similar a la de un h2 */
+    padding: 10px 20px; /* Ajuste del relleno interno del botón */
+
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.2s ease;
+
+}
+
+.tarjeta-producto button:hover {
+    background-color: #d54e1e;
+}
+
+/* Para el campo de entrada de cantidad */
+.tarjeta-producto .cantidad {
+    width: 40px;
+    text-align: center;
+    font-size: 18px;
+    margin: 0 10px;
+}
+
+
+#totales {
+
+    text-align: center;
+}
+#totales p {
+    font-weight: bold; /* Aplica negrita a todo el texto dentro de <p> */
+  }
+  
+  #totales p span {
+    font-weight: normal; /* Mantén el peso de fuente normal para el contenido dentro de <span> */
+  }

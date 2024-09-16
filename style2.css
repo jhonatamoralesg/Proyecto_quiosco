@@ -1,8 +1,8 @@
+
 :root{
     --color-acento: #ee6130;
     --color-acento-claro: #ee613033;
     --color-texto: black;
-    
   }
   
   body{
@@ -57,7 +57,7 @@
     align-items: center; /* Asegura que los elementos dentro también estén centrados */
   }
   
-  #logo {
+  #logo{
     height: 90px; /* Aumenta el tamaño del logo */
     width: 120px;
     border-radius: 16px;
@@ -67,7 +67,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-}
+  }
   
   header nav div{
     display: flex;
@@ -75,9 +75,8 @@
     gap: 40px;
   }
   
-
   header nav img{
-    height: 30px;
+    height: 25px;
   }
   
   #cuenta-carrito{
@@ -89,6 +88,7 @@
     line-height: 25px;
     aspect-ratio: 1;
     text-align: center;
+    /* margin-bottom: 15px; */
   }
   
   footer{
@@ -101,56 +101,3 @@
   footer a{
     text-decoration: underline;
   }
-  
-  /* Productos home */
-  #productos-container{
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px; /* Espacio entre las tarjetas */
-    justify-content: center;
-  }
-  
-  .tarjeta-producto{
-    background-color: var(--color-acento-claro);
-    text-align: center;
-    padding: 10px;
-    width: 220px; /* Asegura que todas las tarjetas tengan el mismo tamaño */
-    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
-    border-radius: 4px;
-    transition: 200ms;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-  }
-  
-  .tarjeta-producto:hover{
-    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.2);
-    translate: 0px -5px;
-  }
-  
-  .tarjeta-producto img{
-    width: 100%;
-    height: 150px; /* Mantén la altura fija */
-    object-fit: contain; /* Asegura que toda la imagen se vea */
-    border-radius: 4px;
-  }
-    
-  
-  .precio{
-    font-weight: 600;
-  }
-  
-  .tarjeta-producto button{
-    font-size: larger;
-    background-color: var(--color-acento);
-    border-radius: 5px;
-    padding: 5px 10px;
-    color: white;
-    border:unset;
-    cursor:pointer;
-  }
-
-#totales {
-
-  font-size: 16px;
-}
