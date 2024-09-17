@@ -1,5 +1,20 @@
 document.addEventListener("DOMContentLoaded", () => {
     const contenedor_tarjetas = document.getElementById("productos-container");
+    const unidadesElement = document.getElementById("unidades");
+    const precioElement = document.getElementById("precio");
+   const  carritoVacioElement=document.getElementById("carrito-vacio");
+   const  totalesCarrito=document.getElementById("totales");
+
+
+const revisarMensajesVacio=()=>{
+const productos=JSON.parse(localStorage.getItem("productos"));
+carritoVacioElement.classList.toggle("escondido", productos && productos.length>0);
+
+totalesCarrito.classList.toggle("escondido", !(productos && productos.length>0)); // si esto es verdadero, escondido se elimina
+};
+
+
+
 const actualizarTotales =()=> {
 const productos= JSON.parse(localStorage.getItem("productos"));
 let unidades=0;
@@ -7,17 +22,16 @@ let precio=0;
 if(productos && productos.length>0)  {
  
     productos.forEach(producto =>{
-      unidades+=producto.unidades
-      precio+=producto.precio*producto.unidades
+      unidades+=producto.cantidad;
+      precio+=producto.precio*producto.cantidad;
 
     });
+    unidadesElement.innerText=unidades;
+    precioElement.innerText=precio;
 }
 
 
 }
-
-
-
     const crearTarjetaProductos = () => {
         contenedor_tarjetas.innerHTML = "";
         const productos = JSON.parse(localStorage.getItem("productos"));
@@ -29,7 +43,7 @@ if(productos && productos.length>0)  {
                 nuevoProducto.innerHTML = `
           <img src="./img/productos/${producto.img}" alt="${producto.nombre}">
           <h2>${producto.nombre}</h2>
-          <p>Precio: $${producto.precio}</p>
+          <p>Precio: S/. ${producto.precio}</p>
           <div>
           <button>-</button>
           <span class="cantidad">${producto.cantidad} </span>
@@ -57,8 +71,11 @@ if(productos && productos.length>0)  {
             });
         }
     };
-
+    revisarMensajesVacio();
     crearTarjetaProductos(productos);
+  
     actualizarNumeroCarrito();
+   
     actualizarTotales();
+
 });

@@ -48,6 +48,13 @@
     justify-content: space-between;
     align-items: center; /* Alinea el contenido verticalmente */
   }
+  .dinero {
+    color: #000; /* Color negro */
+    font-weight: bold; /* Texto en negrita */
+    font-size: 1.5em; /* Tamaño de fuente más grande para destacar */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Sombra para hacerlo más llamativo */
+  }
+  
   
   header nav{
     margin: 0 60px;
@@ -101,3 +108,4 @@
   footer a{
     text-decoration: underline;
   }
+
